@@ -7,9 +7,12 @@
     - name: Install packages
       ansible.builtin.apt:
         name:
-          - prometheus-node-exporter
           - nfs-common
           - qemu-guest-agent
+          - inetutils-ping
+          - nano
+          - htop
+          - cron
         update_cache: true
 
     - name: Start guest qemu-guest-agent
